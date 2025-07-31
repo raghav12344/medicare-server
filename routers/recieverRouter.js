@@ -1,0 +1,12 @@
+var express=require("express");
+var appRouter=express.Router();
+var {validatetoken}=require("../config/validate");
+var obj=require("../controllers/recieverController");
+appRouter.post("/getaadharinfo",validatetoken,obj.getaadharinfo);
+appRouter.post("/needydetails",validatetoken,obj.needydetails);
+appRouter.post("/fetchdetails",validatetoken,obj.fetchdetails);
+appRouter.get("/fetchcities",obj.fetchcities);
+appRouter.get("/fetchmedicines",obj.fetchmedicines);
+appRouter.post("/findmed",validatetoken,obj.findmed);
+appRouter.post("/meddetails",obj.meddetails);
+module.exports=appRouter;
