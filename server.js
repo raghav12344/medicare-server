@@ -24,5 +24,5 @@ app.use("/reciever",recieverRouter);
 app.use("/donar",donarRouter);
 app.use("/user",userRouter);
 app.use("/",(req,resp)=>{
-    resp.send("welcome to sever");
+    resp.send("welcome to sever, this side raghav");
 })
